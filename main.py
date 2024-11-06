@@ -21,8 +21,6 @@ player = FirstPersonController(
     position=(0, 5, 0)
 )
 
-
-
 # Define textures and models for blocks and items
 textures = {
   "grass": load_texture("assets/textures/groundEarth.png"),
