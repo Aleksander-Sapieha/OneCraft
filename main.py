@@ -84,9 +84,17 @@ def input(key):
     hit_info = raycast(camera.world_position, camera.forward, distance=10)
     if hit_info.hit:
       if selected_item == "poppy":
-        block = Block(hit_info.entity.position + hit_info.normal, selected_item, model_type="poppy")
+        if not mouse.hovered_entity.item_type == "bedrock"  and not mouse.hovered_entity.item_type == "barrier":
+          block = Block(hit_info.entity.position + hit_info.normal, selected_item, model_type="poppy")
       else:
         block = Block(hit_info.entity.position + hit_info.normal, selected_item)
+  #grab item
+  if key == "middle mouse down":
+    if dev_mode:
+      selected_item = mouse.hovered_entity.item_type
+    else:
+      if not mouse.hovered_entity.item_type == "bedrock" and not mouse.hovered_entity.item_type == "barrier":
+        selected_item = mouse.hovered_entity.item_type
   #delete block
   if key == "left mouse down" and mouse.hovered_entity:
     if cb == "1":
