@@ -103,7 +103,7 @@ def input(key):
       if not mouse.hovered_entity.item_type == "bedrock" and not mouse.hovered_entity.item_type == "barrier":
          destroy(mouse.hovered_entity)
         
-  #change item type (including different models)
+  #change item type
   if key == "1":
     selected_item = "grass"
   if key == "2":
