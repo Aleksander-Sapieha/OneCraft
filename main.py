@@ -19,7 +19,7 @@ player = FirstPersonController(
     position=(0, 5, 0)
 )
 
-dev_mode = True
+dev_mode = False
 
 # Define textures and models for blocks and items
 textures = {
