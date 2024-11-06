@@ -30,7 +30,6 @@ textures = {
   "stone": load_texture("assets/textures/wallStone.png"),
   "bedrock": load_texture("assets/textures/stone07.png"),
   "barrier": load_texture("assets/textures/barrier01.png"),
-  "pickaxe": load_texture("assets/textures/pickaxe.png"),
 }
 
 models = {
