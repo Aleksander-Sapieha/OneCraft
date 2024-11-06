@@ -4,7 +4,7 @@ from ursina.prefabs.first_person_controller import FirstPersonController
 from perlin_noise import PerlinNoise
 import random
 
-cb = 0
+
 noise = PerlinNoise(octaves=3, seed=random.randint(1, 9999))
 
 #create an instance of the ursina app
@@ -12,6 +12,8 @@ app = Ursina()
 
 #define game variables
 selected_item = "grass"
+dev_mode = False
+cb = 0
 
 #create player
 player = FirstPersonController(
@@ -19,7 +21,7 @@ player = FirstPersonController(
     position=(0, 5, 0)
 )
 
-dev_mode = False
+
 
 # Define textures and models for blocks and items
 textures = {
