@@ -12,7 +12,7 @@ app = Ursina()
 
 #define game variables
 selected_item = "grass"
-dev_mode = False
+dev_mode = True
 cb = 0
 
 #create player
@@ -27,13 +27,16 @@ textures = {
   "dirt": load_texture("assets/textures/groundMud.png"),
   "stone": load_texture("assets/textures/wallStone.png"),
   "bedrock": load_texture("assets/textures/stone07.png"),
-  "barrier": load_texture("assets/textures/barrier01.png"),
+  "barrier": load_texture("assets/textures/barrier01.png")
 }
 
 models = {
   "block": "assets/models/block_model",
-  "poppy": "assets/models/poppy_model",
+  "poppy": "assets/models/poppy_model"
 }
+
+def distance_xz(pos1, pos2):
+    return ((pos1.x - pos2.x) ** 2 + (pos1.z - pos2.z) ** 2) ** 0.5
 
 class Block(Entity):
   def __init__(self, position, item_type, model_type="block"):
@@ -60,7 +63,7 @@ mini_item = Entity(
 )
 
 #create the ground
-min_height = -5
+min_height = -10
 for x in range(-10, 10):
   for z in range(-10, 10):
     height = noise([x * 0.02, z * 0.02])
@@ -74,7 +77,6 @@ for x in range(-10, 10):
         block = Block((x, y + min_height, z), "stone")
       else:
         block = Block((x, y + min_height, z), "dirt")
-      
 
 def input(key):
   global selected_item
