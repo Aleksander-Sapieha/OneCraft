@@ -3,7 +3,7 @@ Minecraft in Python
 
 This is a fork of an existing repository
 
-Credits for assets used:
+## Credits for assets used:
 
 Low poly 3D blocks: https://devilsworkshop.itch.io/essential-low-poly-isometric-3d-block-and-hex-pack
 
