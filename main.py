@@ -12,7 +12,7 @@ app = Ursina()
 
 #define game variables
 selected_item = "grass"
-dev_mode = True
+dev_mode = False
 cb = 0
 
 #create player
